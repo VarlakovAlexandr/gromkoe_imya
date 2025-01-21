@@ -1,0 +1,38 @@
+.btn{
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    
+    padding: 16px 32px;
+    border-radius: 4px;
+    text-transform: uppercase;
+
+    @include calculateResponsiveProperty(768px, 1140px, 16px, 18px, font-size);
+
+    @media (max-width: 480px){
+        width: 100%;
+    }
+}
+
+.btn.btn-primary{
+    color: #fff;
+    background: var(--primary);
+
+    &:hover{
+        background-color: var(--primary-hover);
+    }
+}
+.btn.btn-blue{
+    color: #fff;
+    background: var(--blue);
+
+    &:hover{
+        background-color: var(--blue-hover);
+    }
+}
+
+.btn:disabled{
+    background-color: #999 !important;
+    cursor: default;
+}

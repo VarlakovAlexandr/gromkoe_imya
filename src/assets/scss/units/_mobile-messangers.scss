@@ -1,0 +1,23 @@
+.mobile-messangers{
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    position: fixed;
+    z-index: 100;
+    right: 16px;
+    bottom: 20px;
+    @media (min-width: 576px){
+        display: none;
+    }
+
+    a{
+        width: 48px;
+        height: 48px;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

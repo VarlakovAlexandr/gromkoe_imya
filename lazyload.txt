@@ -1,0 +1,26 @@
+//отложенная загрузка изображений
+let observerOptions = {
+    rootMargin: '500px'  
+};
+document.addEventListener("DOMContentLoaded", function() {
+    var lazyImages = [].slice.call(document.querySelectorAll("[data-lazy-img]"));
+    if ("IntersectionObserver" in window) {
+        let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    let lazyImage = entry.target;
+                    lazyImage.src = lazyImage.getAttribute('data-lazy-img');
+                    lazyImage.removeAttribute('data-lazy-img')
+                    lazyImageObserver.unobserve(lazyImage);
+                }
+            });
+        },observerOptions);
+        lazyImages.forEach(function(lazyImage) {
+            lazyImageObserver.observe(lazyImage);
+        });
+    } else {
+    
+    }
+});
+
+<img src="assets/img/placeholder.png" data-lazy-img="assets/img/placeholder.png" alt="">

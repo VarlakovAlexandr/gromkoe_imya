@@ -1,0 +1,117 @@
+@use "sass:math";
+@import 'functions';
+
+@mixin calculateResponsiveProperty($startBreakPoint, $endBreakPoint, $startValue, $finishValue, $property ){
+	@media (min-width: $startBreakPoint){
+		#{$property}: calculateResponsiveValue( $startBreakPoint, $endBreakPoint, $startValue, $finishValue );
+		
+	}
+	@media (min-width: $endBreakPoint){
+		#{$property}: $finishValue;
+	}
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root{
+	--primary: #ff551f;
+	--primary-hover: #ff3d00;
+	--blue: #2cafc3;
+	--blue-hover: #2591A2;
+	--gray: #b3b3b3;
+	--dark: #333;
+}
+
+a{
+	text-decoration: none;
+}
+
+button{
+	cursor: pointer;
+}
+
+button, textarea, input{
+	background: transparent;
+	border: none;
+	outline: none;
+}
+textarea, input{
+	width: 100%;
+}
+a, textarea, input, button{
+	transition: ease-in 300ms;
+	font-family: inherit;
+	outline: none;
+}
+a, textarea, input, button{
+	font-family: var(--font-family);
+}
+
+textarea{
+	resize: none;
+}
+
+ul{
+	list-style: none;
+}
+
+address{
+	font-style: normal;
+}
+
+html{
+	
+	font-family: 'DIN Pro';
+}
+body{
+	display: flex;
+	flex-direction: column;	
+	min-height: 100vh;
+	
+}
+
+body.no-scroll{
+	overflow: hidden;
+}
+main{
+	flex-grow: 1;
+
+	padding-top: 40px;
+
+	display: flex;
+	flex-direction: column;
+	row-gap: 40px;
+	
+	@include calculateResponsiveProperty(768px, 1140px, 40px, 80px, row-gap);
+}
+
+.container{
+	width: 100%;
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.section{
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+@import 'units/header';
+@import 'units/menu';
+@import 'units/footer';
+@import 'units/typography';
+@import 'units/partners-slider';
+@import 'units/bs-col';
+@import 'units/offsets';
+@import 'units/advantage-block';
+@import 'units/company-advantages';
+@import 'units/t-banners-list';
+@import 'units/about-section';
+@import 'units/modals';
+@import 'units/mobile-messangers';
+@import 'units/ui';
+@import 'vav-css';

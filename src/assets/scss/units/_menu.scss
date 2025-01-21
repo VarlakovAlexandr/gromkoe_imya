@@ -1,0 +1,375 @@
+.menu.accordion{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    @media (min-width: 576px){
+        flex-direction: row;
+        column-gap: 10px;
+
+        & > .menu__item:not(.active){
+            &:hover{
+                background-color: var(--blue);
+            }
+            
+    
+        }
+    
+        & > .menu__item:not(.active):hover > .menu__link{
+            color: #fff;
+        }
+
+        .itc-accordion-header::after{
+            display: none;
+        }
+    }
+    
+
+    
+}
+
+
+
+.submenu{
+    
+
+    @media (min-width: 576px){
+        display: none;
+
+
+        .menu__link{
+            width: 100%;
+        }
+    }
+
+    
+}
+
+
+
+.menu__item{
+    
+    transition: 500ms ease-in;
+
+    @media (min-width: 576px){
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+    }
+}
+.menu__item.itc-accordion-item{
+    position: relative;
+
+    @media (min-width: 576px){
+        & > .submenu.itc-accordion-body{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translate(0, calc(100% - 10px));
+            opacity: 0;
+            transition: 300ms;
+        }
+
+        .submenu .menu__link{
+            font-size: 12px;
+            max-width: initial;
+        }
+
+        .submenu{
+            min-width: 270px;
+            background: #FDF5F3;
+            border-top: 1px solid #DDD;
+            border-left: 1px solid #DDD;
+            border-right: 1px solid #DDD;
+        }
+
+
+        &:hover{
+            & > .submenu.itc-accordion-body{
+                display: flex;
+                flex-direction: column;
+                
+                animation: showVertMenu 300ms forwards;
+                
+            }
+        }
+    }
+    @media (min-width: 768px){
+        .submenu{
+            min-width: 290px;
+        }
+    }
+    .submenu .menu__link{
+        @include calculateResponsiveProperty(576px, 1140px, 12px, 14px, font-size);
+    }
+}
+
+
+@keyframes showVertMenu {
+    to{
+        transform: translate(0, 100%);
+        opacity: 1;
+    }
+}
+
+.submenu.itc-accordion-body{
+    position: relative;
+
+    & > .itc-accordion-body{
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(100%, 0);
+    }
+    .itc-accordion-content.itc-accordion-item{
+        position: relative;
+    }
+    &:hover{
+        & > .itc-accordion-body{
+            display: flex;
+            flex-direction: column;
+
+            
+        }
+        /*& > .itc-accordion-content.itc-accordion-item > .itc-accordion-body{
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(100%, 0);
+        }
+       
+        .itc-accordion-content > .itc-accordion-body{
+            .submenu{
+                display: flex;
+                flex-direction: column;
+            }
+        }*/
+        /*.submenu{
+            
+        }*/
+    }
+}
+.itc-accordion-content.itc-accordion-item.has-submenu{
+    .submenu{
+        
+
+        @media (min-width: 576px){
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    & > .itc-accordion-header{
+        @media (min-width: 576px){
+            padding-right: 24px;
+            position: relative;
+            &::before{
+                display: block;
+                content: "▾";
+                font-size: 18px;
+                color: black;
+                position: absolute;
+                right: 8px;
+                top: 50%;
+                transform: translate(0, -50%);
+                transition: 300ms ease-in;
+            }
+        }
+    }
+    
+    .itc-accordion-body{
+        @media (min-width: 576px){
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translate(calc(100% - 10px), 0);
+            display: none;
+            transition: 300ms;
+            opacity: 0;
+        }
+
+        
+    }
+
+    .itc-accordion-content.itc-accordion-item{
+        @media (min-width: 576px){
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(100%, 0);
+        }
+        
+    }
+
+    &:hover{
+        @media (min-width: 576px){
+            .itc-accordion-body{
+                display: flex;
+                animation: showHorzMenu 300ms forwards;
+            }
+        }
+    }
+
+    &:hover > .itc-accordion-header{
+        @media (min-width: 576px){
+            &::before{
+                color: var(--primary);
+            }
+        }
+    }
+}
+
+
+@keyframes showHorzMenu {
+    to{
+        opacity: 1;
+        transform: translate(100%, 0);
+    }
+}
+
+.menu > .menu__item.active{
+    & > .menu__link{
+        color: var(--primary);
+    }
+
+    
+    
+    @media (min-width: 576px){
+        background-color: var(--primary);
+        & > .itc-accordion-header > .menu__link{
+            color: #fff;
+        }
+    }
+
+    
+
+}
+.menu__item.itc-accordion-item{
+    @media (min-width: 576px){
+
+        &:hover > .submenu.itc-accordion-body > .itc-accordion-content.itc-accordion-item > .submenu{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+.itc-accordion-content.itc-accordion-item:not(.has-submenu){
+    @media (min-width: 576px){
+        .submenu{
+            border: none;
+        }
+    }
+    
+}
+
+
+
+
+.menu__link{
+    display: inline-flex;
+    
+    
+
+    text-transform: uppercase;
+    font-weight: 600;
+    
+    line-height: 110%;
+    
+    color: #000;
+    font-size: 18px;
+    
+
+    @media (min-width: 576px){
+
+        padding: 6px 0;
+        padding-left: 4px;
+        padding-right: 4px;
+        max-width: 200px;
+
+        font-size: 12px;
+        text-align: center;
+        align-items: center;
+        text-align: center;
+        color: #b3b3b3;
+    }
+
+
+
+    @include calculateResponsiveProperty(576px, 1140px, 12px, 19px, font-size);
+    @include calculateResponsiveProperty(576px, 1140px, 4px, 28px, padding-left);
+    @include calculateResponsiveProperty(576px, 1140px, 4px, 28px, padding-right);
+
+}
+
+.menu__item.active > .itc-accordion-header > .menu__link{
+    @media (max-width: 576px){
+        color: var(--primary);
+    }
+    
+}
+
+
+.submenu{
+    .menu__link{
+        display: block;
+        color: #282828;
+        padding: 4px;
+        text-transform: none;
+        font-weight: 400;
+        text-align: left;
+        &:hover{
+            color: var(--primary);
+        }
+        @media (min-width: 576px){
+            padding: 6px;
+        }
+    }
+    .itc-accordion-content{
+        padding: 4px 0 6px 4px;
+
+        @media (min-width: 576px){
+            padding: 0;
+        }
+        .itc-accordion-header{
+            
+            border-bottom: 1px solid #ddd;
+        }
+        
+    }
+    .submenu > li.submenu__item{
+        border-bottom: 1px solid #ddd;
+        
+    }
+    li.submenu__item{
+        border-bottom: 1px solid #ddd;
+        
+    }
+
+    .menu__link{
+        @include calculateResponsiveProperty(576px, 1140px, 6px, 20px, padding-left);
+        @include calculateResponsiveProperty(576px, 1140px, 6px, 20px, padding-right);
+        @include calculateResponsiveProperty(576px, 1140px, 6px, 10px, padding-top);
+        @include calculateResponsiveProperty(576px, 1140px, 6px, 10px, padding-bottom);
+    }
+}
+.itc-accordion-content.itc-accordion-item.has-submenu.itc-accordion-item-slidedown > .itc-accordion-header > .menu__link {
+    @media (max-width: 576px){
+        color: var(--primary);
+    }
+}
+.itc-accordion-content.itc-accordion-item.has-submenu.itc-accordion-item-show > .itc-accordion-header > .menu__link {
+    @media (max-width: 576px){
+        color: var(--primary);
+    }
+}
+
+
+.menu__item.itc-accordion-item.itc-accordion-item-show > .itc-accordion-header > .menu__link {
+    @media (max-width: 576px){
+        color: var(--primary);
+    }
+}
+
+.menu__item.itc-accordion-item.itc-accordion-item-slidedown > .itc-accordion-header > .menu__link {
+    @media (max-width: 576px){
+        color: var(--primary);
+    }
+}

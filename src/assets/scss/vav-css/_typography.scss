@@ -1,0 +1,18 @@
+/*text-align*/
+@each $property-name in $text-align-properties {
+    .text-#{$property-name} {
+        text-align: $property-name;        
+    }
+        
+}
+
+@each $brekpoint-name, $breakpoint-value in $break-points{
+    @media (min-width: $breakpoint-value){
+        @each $property-name in $text-align-properties {
+            .text-#{$brekpoint-name}-#{$property-name} {
+                text-align: $property-name;                    
+            }
+        }
+    }
+}
+/*text-align*/

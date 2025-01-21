@@ -1,0 +1,50 @@
+$md: 768px;
+$lg: 992px;
+
+
+
+$break-points: (
+  md: $md,  
+  lg: $lg,
+);
+
+
+$offsets:(
+    0: 0px,
+    4: 4px, 
+    8: 8px, 
+    12: 12px, 
+    16: 16px, 
+    20: 20px, 
+    24: 24px, 
+    28: 28px, 
+    32: 32px, 
+    36: 36px, 
+    40: 40px, 
+);
+
+
+
+
+@each $number, $offset in $offsets {
+
+    //margin-bottom
+    .mb-#{$number}{
+        margin-bottom: $offset ;
+    }
+    
+}
+
+
+@each $bp-name, $break-point in $break-points {
+    @each $number, $offset in $offsets {
+        
+        //margin-bottom
+        .mb-#{$bp-name}-#{$number}{
+            @media (min-width: $break-point){
+                margin-bottom: $offset ;
+            }
+            
+        }
+    }
+}

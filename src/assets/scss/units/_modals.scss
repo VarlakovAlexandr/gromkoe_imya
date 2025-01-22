@@ -141,6 +141,11 @@
 #file-load{
     display: none;
 }
+
+input[name="file-load"]{
+    display: none;
+}
+
 .file-wrap__clear{
     display: none;
 }

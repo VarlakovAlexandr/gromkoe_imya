@@ -4,6 +4,11 @@ if ( document.querySelector('.menu.accordion') ){
 	});
 }
 
+if ( document.querySelector('.faq-accordion.accordion') ){
+    new ItcAccordion('.faq-accordion.accordion', {		
+        alwaysOpen: false
+	});
+}
 
 
 if ( document.querySelector('.accordion.mobile-spoiler') ){
@@ -307,4 +312,22 @@ if ( phoneInputs.length ){
 
 	
 
-	
+
+let egPhotoSlider = new Swiper(".swiper.eg-slider", {
+    speed: 1000,
+    freeMode: true,
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+})
+
+let fixCardSlider = new Swiper(".swiper.fix-card-slider", {
+    speed: 1000,
+    freeMode: true,
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+
+   1180: {
+        freeMode: false,
+        simulateTouch: false,
+   }
+})

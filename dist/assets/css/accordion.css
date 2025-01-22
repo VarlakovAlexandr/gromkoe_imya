@@ -170,3 +170,157 @@
     display: block !important;
   }
 }
+
+.accordion.faq-accordion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 12px;
+}
+.accordion.faq-accordion .itc-accordion-content {
+  padding: 0 12px 16px;
+  background: #f6f6f6;
+}
+@media (min-width: 768px) {
+  .accordion.faq-accordion .itc-accordion-content {
+    padding-left: calc(12px + (1vw - 7.68px) * 4.3010752688);
+  }
+}
+@media (min-width: 1140px) {
+  .accordion.faq-accordion .itc-accordion-content {
+    padding-left: 28px;
+  }
+}
+@media (min-width: 768px) {
+  .accordion.faq-accordion .itc-accordion-content {
+    padding-right: calc(12px + (1vw - 7.68px) * 4.3010752688);
+  }
+}
+@media (min-width: 1140px) {
+  .accordion.faq-accordion .itc-accordion-content {
+    padding-right: 28px;
+  }
+}
+@media (min-width: 768px) {
+  .accordion.faq-accordion .itc-accordion-content {
+    padding-bottom: calc(16px + (1vw - 7.68px) * 2.1505376344);
+  }
+}
+@media (min-width: 1140px) {
+  .accordion.faq-accordion .itc-accordion-content {
+    padding-bottom: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .accordion.faq-accordion .itc-accordion-content {
+    row-gap: 16px;
+  }
+}
+.accordion.faq-accordion .itc-accordion-item-show > .itc-accordion-header::after,
+.accordion.faq-accordion .itc-accordion-item-slidedown > .itc-accordion-header::after {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+.accordion.faq-accordion .itc-accordion-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 32px;
+     -moz-column-gap: 32px;
+          column-gap: 32px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px 12px;
+  background: #f6f6f6;
+}
+@media (min-width: 768px) {
+  .accordion.faq-accordion .itc-accordion-header {
+    padding-left: calc(12px + (1vw - 7.68px) * 4.3010752688);
+  }
+}
+@media (min-width: 1140px) {
+  .accordion.faq-accordion .itc-accordion-header {
+    padding-left: 28px;
+  }
+}
+@media (min-width: 768px) {
+  .accordion.faq-accordion .itc-accordion-header {
+    padding-right: calc(12px + (1vw - 7.68px) * 4.3010752688);
+  }
+}
+@media (min-width: 1140px) {
+  .accordion.faq-accordion .itc-accordion-header {
+    padding-right: 28px;
+  }
+}
+@media (min-width: 768px) {
+  .accordion.faq-accordion .itc-accordion-header {
+    padding-top: calc(16px + (1vw - 7.68px) * 2.1505376344);
+  }
+}
+@media (min-width: 1140px) {
+  .accordion.faq-accordion .itc-accordion-header {
+    padding-top: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .accordion.faq-accordion .itc-accordion-header {
+    padding-bottom: calc(16px + (1vw - 7.68px) * 2.1505376344);
+  }
+}
+@media (min-width: 1140px) {
+  .accordion.faq-accordion .itc-accordion-header {
+    padding-bottom: 24px;
+  }
+}
+.accordion.faq-accordion .text-hide, .accordion.faq-accordion .text-show {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: justify;
+}
+.accordion.faq-accordion .spoiler-arrow {
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+.accordion.faq-accordion .itc-accordion-item-show .text-hide {
+  display: block;
+}
+.accordion.faq-accordion .itc-accordion-item-show .text-show {
+  display: none;
+}
+.accordion.faq-accordion .spoiler-arrow {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.accordion.faq-accordion .itc-accordion-item-slidedown .spoiler-arrow {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.accordion.faq-accordion .itc-accordion-item.itc-accordion-item-show .spoiler-arrow {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.accordion.faq-accordion .itc-accordion-item:not(.itc-accordion-item-show) .itc-accordion-body {
+  display: none;
+}
+.accordion.faq-accordion .itc-accordion-item:not(.itc-accordion-item-show) .text-hide {
+  display: none;
+}
+.accordion.faq-accordion .itc-accordion-item:not(.itc-accordion-item-show) .text-show {
+  display: block;
+}

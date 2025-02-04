@@ -5,8 +5,8 @@
          position: absolute;
          top: 0;
          left: 0;
-         width: 100%;
-         height: 100%;
+         width: calc(100% - 32px);
+         height: calc(100% - 50px);
          z-index: -1;
          background: #fdf5f3;
 
@@ -17,23 +17,28 @@
         display: none;
     }
 }
-
+.eg-form__text-block{
+    
+}
 
 .eg-form__title-block{
     padding: 24px 32px 5px;
     border-bottom: 5px solid var(--primary);
+    width: calc(100% - 32px);
 }
 
 .eg-form__text-block{
-    padding: 24px 32px 36px;
+    padding: 24px 64px 36px 32px;
     display: flex;
     flex-direction: column;
     row-gap: 12px;
+    
 }
 
 .page-form{
     padding: 24px 32px 32px;
     background: #2cafc3;
+    margin-left: 32px;
 }
 
 .page-form__title-block{

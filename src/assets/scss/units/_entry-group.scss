@@ -440,6 +440,12 @@
             order: 2;
         }
     }
+
+    @media (min-width: 768px){
+        .btn{
+            min-width: 310px;
+        }
+    }
 }
 
 .int-offers{
@@ -474,6 +480,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #fdf5f3;
 }
 
 .int-offers__item-body{

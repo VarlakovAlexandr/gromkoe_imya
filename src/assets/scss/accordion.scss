@@ -210,12 +210,13 @@
   flex-direction: column;
   row-gap: 12px;
   .itc-accordion-content{
-    padding: 0 12px 16px;
+    padding: 16px 12px 16px;
     //padding: 0 24px 16px;
-    background: #f6f6f6;
+    //background: #f6f6f6;
     @include calculateResponsiveProperty(768px, 1140px, 12px, 28px,  padding-left);
     @include calculateResponsiveProperty(768px, 1140px, 12px, 28px,  padding-right);    
     @include calculateResponsiveProperty(768px, 1140px, 16px, 24px,  padding-bottom);
+    @include calculateResponsiveProperty(768px, 1140px, 16px, 24px,  padding-top);
     @media (min-width: 768px){
       row-gap: 16px;
     }

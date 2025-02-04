@@ -331,3 +331,7 @@ let fixCardSlider = new Swiper(".swiper.fix-card-slider", {
         simulateTouch: false,
    }
 })
+
+
+$('#photobox-gallery').photobox('a', { thumbs:false, time:0, history:false, captionTmpl:'<div class="title">{title}</div>' });
+

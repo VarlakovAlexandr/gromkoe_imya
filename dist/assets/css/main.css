@@ -113,25 +113,6 @@ main {
   padding-right: 16px;
 }
 
-.note-block {
-  background-color: #fdf5f3;
-  min-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 8px;
-}
-@media (min-width: 768px) {
-  .note-block {
-    padding: 24px 28px 28px 16px;
-    border-left: 5px solid var(--primary);
-  }
-}
-
 .header {
   padding-left: 16px;
   padding-right: 16px;
@@ -4198,7 +4179,7 @@ input[name=file-load] {
 }
 @media (min-width: 768px) {
   .note-block {
-    padding: 24px 28px 28px 16px;
+    padding: 12px 28px 28px 16px;
     border-left: 5px solid var(--primary);
   }
 }

@@ -212,7 +212,7 @@
   .itc-accordion-content{
     padding: 16px 12px 16px;
     //padding: 0 24px 16px;
-    //background: #f6f6f6;
+    background: transparent;
     @include calculateResponsiveProperty(768px, 1140px, 12px, 28px,  padding-left);
     @include calculateResponsiveProperty(768px, 1140px, 12px, 28px,  padding-right);    
     @include calculateResponsiveProperty(768px, 1140px, 16px, 24px,  padding-bottom);

@@ -51,3 +51,12 @@
         border-left: 5px solid var(--primary);
     }
 }
+
+.dotted-list{
+    list-style: disc;
+    list-style-position: outside;
+    padding-left: 1.25em;
+    display: flex;
+    flex-direction: column;
+    row-gap: .5em;
+}

@@ -1,0 +1,17 @@
+.quote{
+    background-color: #FDF5F3;  
+    padding: 16px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    @media (min-width: 992px){
+        row-gap: 12px;
+    }
+}
+.quote.light-blue{
+    background-color: #F2F1F7;  
+    padding: 16px;
+    border-radius: 4px;
+  }

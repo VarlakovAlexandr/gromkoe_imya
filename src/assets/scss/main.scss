@@ -86,6 +86,9 @@ main{
 	row-gap: 40px;
 	
 	@include calculateResponsiveProperty(768px, 1140px, 40px, 80px, row-gap);
+
+	max-width: 100%;
+	overflow: hidden;
 }
 
 .container{
@@ -100,7 +103,11 @@ main{
 	padding-right: 16px;
 }
 
-
+.row.row-margin-0{
+	& > * {
+		margin-top: 0;
+	}
+}
 
 
 @import 'units/header';
@@ -121,4 +128,7 @@ main{
 @import 'units/our-works';
 @import 'units/ui';
 @import 'units/video-block';
+@import 'units/qoute';
+@import 'units/description-product';
+@import 'units/use-materials';
 @import 'vav-css';

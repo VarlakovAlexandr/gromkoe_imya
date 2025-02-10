@@ -196,6 +196,52 @@ let slider = new Swiper(".swiper.project-gallery", {
 })
 
 
+document.addEventListener('DOMContentLoaded', function(){
+
+    const testWindow = document.documentElement.clientWidth;
+
+    let _breakpoints =  {
+        
+    }
+
+    let _effect = 'fade';
+
+    if ( testWindow < 992 ){
+        _breakpoints = {
+            320: {
+                slidesPerView: 1.2,
+                spaceBetween: 20
+            },
+            992: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                
+            }
+        }
+
+        _effect = false;
+    } 
+
+    const descriptionSlider  = new Swiper(".dp-slider-block__slider.swiper", {
+        speed: 1000,
+        autoplay: {
+            delay: 3000,
+        },
+        slidesPerView: 1.1,
+        spaceBetween: 20,
+       
+        pagination: {
+            el: '.dp-slider-block__slider-pagination',
+            clickable: true,
+        },
+        effect: _effect,
+        breakpoints: _breakpoints,
+        
+    })
+})
+
+
+
 Fancybox.bind('[data-fancybox]', {
     compact: false,
     contentClick: "iterateZoom",

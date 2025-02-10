@@ -1,0 +1,22 @@
+.use-materials{
+    border-radius: 4px;
+    background: #f2f1f7;
+    padding: 12px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #333;
+
+
+    @media (min-width: 992px){
+        row-gap: 14px;
+        padding: 20px 16px;
+        min-height: 100%;
+    }
+}

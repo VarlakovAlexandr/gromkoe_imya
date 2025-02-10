@@ -1,58 +1,55 @@
-.text{
-    font-size: 16px;
+.text {
+    font-size: 17px;
     font-weight: 400;
     line-height: 1.4;
     letter-spacing: 0%;
     text-align: justify;
     color: var(--dark);
-    @include calculateResponsiveProperty(768px, 1140px, 16px, 18px, font-size);
 
+    transition: all 0.2s ease;
 }
 
-.text-sm{
+.text-sm {
     font-size: 16px;
-    
-    line-height: 140%;   
-    
+
+    line-height: 140%;
 }
 
-
-.title{
+.title {
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 20px;
     line-height: 120%;
     @include calculateResponsiveProperty(768px, 1140px, 20px, 24px, font-size);
 }
-.title-lg{
+.title-lg {
     font-weight: 700;
     font-size: 24px;
     line-height: 130%;
     @include calculateResponsiveProperty(768px, 1140px, 24px, 28px, font-size);
 }
 
-.fw-600{
+.fw-600 {
     font-weight: 600;
 }
-.fw-bold{
+.fw-bold {
     font-weight: bold;
 }
-.text-primary{
+.text-primary {
     color: var(--primary);
 }
 
-.text-white{
+.text-white {
     color: #fff;
 }
 
-.text-dark{
+.text-dark {
     color: var(--dark);
 }
-.text-blue{
+.text-blue {
     color: var(--blue);
 }
 
-.text-uppercase{
+.text-uppercase {
     text-transform: uppercase;
 }
-

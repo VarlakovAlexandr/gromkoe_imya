@@ -238,6 +238,23 @@ document.addEventListener('DOMContentLoaded', function(){
         breakpoints: _breakpoints,
         
     })
+
+    const miniCatalogGallery  = new Swiper(".mc__gallery.swiper", {
+        speed: 1000,
+        autoplay: {
+            delay: 3000,
+        },
+        slidesPerView: 1,
+        spaceBetween: 20,
+       
+        pagination: {
+            el: '.mc__gallery-pagination',
+            clickable: true,
+        },
+        effect: _effect,
+        
+        
+    })
 })
 
 

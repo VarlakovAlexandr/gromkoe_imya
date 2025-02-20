@@ -52,12 +52,12 @@
     font-weight: 400;
     font-size: 14px;
 
-    @include calculateResponsiveProperty(576px, 1140px, 14px, 22px, font-size);
     line-height: 109%;
     letter-spacing: 0.5em;
     color: var(--primary);
     text-transform: uppercase;
     text-align: center;
+    @include calculateResponsiveProperty(576px, 1140px, 14px, 22px, font-size);
 }
 .header-contacts {
     display: flex;
@@ -78,11 +78,11 @@
     font-size: 20px;
     //font-size: 26px;
 
-    @include calculateResponsiveProperty(576px, 1140px, 20px, 26px, font-size);
     line-height: 120%;
     display: flex;
     column-gap: 12px;
     align-items: center;
+    @include calculateResponsiveProperty(576px, 1140px, 20px, 26px, font-size);
 
     svg {
         max-width: 16px;

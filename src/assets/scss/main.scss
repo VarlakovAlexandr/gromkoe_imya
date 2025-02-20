@@ -23,6 +23,7 @@
 	--blue-hover: #2591A2;
 	--gray: #b3b3b3;
 	--dark: #333;
+	--light-orange: #fdf5f3;
 }
 
 a{
@@ -109,6 +110,19 @@ main{
 	}
 }
 
+.inner-content-col{
+	display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    @include calculateResponsiveProperty(768px, 1140px, 40px, 60px, row-gap);
+}
+
+
+.block{
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
 
 @import 'units/header';
 @import 'units/menu';
@@ -131,4 +145,9 @@ main{
 @import 'units/qoute';
 @import 'units/description-product';
 @import 'units/use-materials';
+
+@import 'units/gm-block';
+@import 'units/mc';
+
+
 @import 'vav-css';

@@ -1,62 +1,71 @@
-.btn{
+.btn {
     text-align: center;
     font-weight: 600;
     font-size: 16px;
     line-height: 120%;
-    
+
     padding: 16px 32px;
     border-radius: 4px;
     text-transform: uppercase;
 
     @include calculateResponsiveProperty(768px, 1140px, 16px, 18px, font-size);
 
-    @media (max-width: 480px){
+    @media (max-width: 480px) {
         width: 100%;
     }
 }
 
-.btn.btn-primary{
+.btn.btn-primary {
     color: #fff;
     background: var(--primary);
 
-    &:hover{
+    &:hover {
         background-color: var(--primary-hover);
     }
 }
-.btn.btn-blue{
+.btn.btn-blue {
     color: #fff;
     background: var(--blue);
 
-    &:hover{
+    &:hover {
         background-color: var(--blue-hover);
     }
 }
 
-.btn:disabled{
+.btn:disabled {
     background-color: #999 !important;
     cursor: default;
 }
 
-.note-block{
-    background-color: #fdf5f3;    
-    
+.note-block {
+    background-color: #fdf5f3;
+
     min-height: 100%;
     display: flex;
     flex-direction: column;
     row-gap: 8px;
 
-    @media (min-width: 768px){
-        
+    @media (min-width: 768px) {
         padding: 12px 28px 28px 16px;
         border-left: 5px solid var(--primary);
     }
 }
 
-.dotted-list{
+.dotted-list,
+.dotted-list {
     list-style: disc;
     list-style-position: outside;
     padding-left: 1.25em;
     display: flex;
     flex-direction: column;
-    row-gap: .5em;
+    row-gap: 0.5em;
+
+    ul {
+        list-style: disc;
+        list-style-position: outside;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5em;
+    }
 }

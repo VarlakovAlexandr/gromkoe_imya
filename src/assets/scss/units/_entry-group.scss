@@ -68,6 +68,7 @@
         box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.25);
         position: relative;
         overflow: hidden;
+        min-height: 360px;
         img {
             position: absolute;
             width: 100%;
@@ -323,7 +324,7 @@
 
     .swiper-wrapper {
         padding: 5px;
-        
+
         @media (min-width: 768px) {
             padding: 0;
         }
@@ -502,85 +503,87 @@
         transition: ease 500ms;
     }
 }
-.eg-table-price-container{
+.eg-table-price-container {
     overflow-x: auto;
 }
 
-.eg-table-price-container__border-container{
+.eg-table-price-container__border-container {
     border-radius: 4px 4px 0 0;
     width: 100%;
     min-width: max-content;
     overflow: hidden;
 }
 
-.eg-table-price{
-    width: 480px;
-    border-collapse: collapse;
+.eg-table-price {
+    table {
+        width: 480px !important;
+        border-collapse: collapse;
 
-    @media (min-width: 600px){
-        width: 100%;
-        min-width: 480px;
-    }
-    th{
-        font-weight: 700;
-        color: #fff;
-        
-        background: #2cafc3;
+        @media (min-width: 600px) {
+            width: 100% !important;
+            min-width: 480px !important;
+        }
+        tr {
+            &:first-child {
+                td {
+                    font-weight: 700;
+                    font-size: 17px !important;
+                    color: #fff;
 
-        &:nth-of-type(1){
-            width: 37%;
-            @media (min-width: 600px){
-                width: 44%;
+                    background: #2cafc3;
+
+                    &:nth-of-type(1) {
+                        width: 37% !important;
+                        @media (min-width: 600px) {
+                            width: 44% !important;
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        width: 20% !important;
+                        @media (min-width: 600px) {
+                            width: 14% !important;
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        width: 26% !important;
+                        @media (min-width: 600px) {
+                            width: 26% !important;
+                        }
+                    }
+                }
             }
         }
-        &:nth-of-type(2){
-            width: 20%;
-            @media (min-width: 600px){
-                width: 14%;
+        td {
+            padding: 10px 12px;
+            text-align: left;
+            font-size: 16px;
+            font-family: var(--font-family);
+
+            line-height: 140%;
+
+            &:not(:first-of-type) {
+                border-left: 1px solid #d9d9d9;
+            }
+
+            @media (min-width: 992px) {
+                padding: 12px;
+                text-align: justify;
             }
         }
-        &:nth-of-type(3){
-            width: 26%;
-            @media (min-width: 600px){
-                width: 26%;
+        thead {
+            border: 1px solid #2cafc3;
+        }
+
+        tbody {
+            border: 1px solid #d9d9d9;
+            tr {
+                &:nth-child(odd) {
+                    background: #fdf5f3;
+                }
             }
-        }
-        
-    }
-    th, td{
-        padding: 10px 12px;
-        text-align: left;
-        font-family: var(--font-family);
-        font-size: 16px;
-        
-        
-        line-height: 140%;
-        
-        color: #333;
-
-        &:not(:first-of-type){
-            border-left: 1px solid #d9d9d9;;
-        }
-
-        @media (min-width: 992px){
-            font-size: 18px;
-            padding: 12px;
-            text-align: justify;
-        }
-    }
-    thead{
-        border: 1px solid #2cafc3;;
-    }
-
-    tbody{
-        border: 1px solid #d9d9d9;;
-        tr{
-            &:nth-child(odd){
-                background: #fdf5f3;
+            td:first-of-type {
+                font-weight: 700;
             }
-        }
-        td:first-of-type{
-            font-weight: 700;
         }
     }
 }

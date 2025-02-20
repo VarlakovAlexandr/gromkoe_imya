@@ -129,8 +129,8 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
-    @include calculateResponsiveProperty(768px, 1140px, 16px, 18px, font-size);
     color: #333;
+    @include calculateResponsiveProperty(768px, 1140px, 16px, 18px, font-size);
     path{
         transition: 300ms ease-in;
     }

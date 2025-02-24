@@ -389,10 +389,10 @@ let fixCardSlider = new Swiper(".swiper.fix-card-slider", {
     slidesPerView: 'auto',
     spaceBetween: 20,
 
-   1180: {
+    1180: {
         freeMode: false,
         simulateTouch: false,
-   }
+    }
 })
 
 

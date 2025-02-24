@@ -192,6 +192,7 @@ main {
   margin: 10px;
   position: relative;
   overflow: hidden;
+  border-radius: 4px;
 }
 .flex-images .item img {
   cursor: pointer;
@@ -222,40 +223,6 @@ main {
     -ms-flex-negative: 0;
         flex-shrink: 0;
   }
-}
-
-.flex-images .item.table-slide {
-  width: 80.769230769vw;
-  max-width: 310px;
-  border-radius: 4px;
-  overflow: hidden;
-}
-.flex-images .item.table-slide table {
-  width: 100%;
-  border-collapse: collapse;
-}
-.flex-images .item.table-slide thead {
-  background: #b3b3b3;
-}
-.flex-images .item.table-slide th {
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 100%;
-  color: #fff;
-  padding: 11px 8px;
-  border: 1px solid #d9d9d9;
-  text-align: left;
-  width: 33.3333%;
-}
-.flex-images .item.table-slide td {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
-  color: #333;
-  padding: 11px 8px;
-  border: 1px solid #d9d9d9;
 }
 
 .header {

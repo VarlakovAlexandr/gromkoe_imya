@@ -124,146 +124,10 @@ main{
 	row-gap: 20px;
 }
 
-.flex-images {
-	margin-left: -10px;
-	width: calc(100% + 20px);
-
-	@media (max-width: 1024px){
-		overflow: auto;
-		.item{
-			width: auto;
-		}
-		display: flex;
-		flex-direction: row;
-		column-gap: 20px;
-		
-		padding: 10px 10px 16px;
-		margin-left: -10px;
-		
-	}
-}
-.flex-images .item{
-	margin: 10px;
-	position: relative;
-	overflow: hidden;
-	
-
-	border: 4px solid white;
-	box-shadow: 4px 4px 10px #aaaaaa;
-	@media (max-width: 1024px){
-		width: auto !important;
-		
-		float: none;
-		margin: 0;
-		flex-shrink: 0;
-		min-height: 100%;
-		height: 230px !important;
-		height: auto;
-	}
-
-	img{
-		cursor: pointer;
-		width: 100%;
-		height: 100%;
-		max-width: 100%;
-		max-height: 100%;
-		object-fit: cover;
-		
-		object-fit: cover;
-		object-position: center;
-		position: absolute;
-		
-		transition: ease .5s;
-
-		@media (max-width: 1024px){
-			position: static;
-		}
-	}
-
-	&:hover{
-		img{
-			transform:  scale(1.05)
-		}
-	}
-
-	
-}
 
 
 
-.sl-gallery{
-	width: 100%;
-}
-.sl-gallery__inner{
-	max-width: 100%;
-	overflow: hidden;
-	max-height: 200px;
-	img{
-		visibility: hidden;
 
-	}
-}
-
-.sl-gallery__item{
-	border: 4px solid white;
-		box-shadow: 4px 4px 10px #aaaaaa;
-}
-
-.sl-gallery.active{
-	padding: 10px 10px 20px;
-	margin-left: -10px;
-	width: calc(100% + 20px);
-	.sl-gallery__inner{
-		overflow: visible;
-		max-height: unset;
-		display: flex;
-		column-gap: 20px;
-
-		
-	}
-
-	.sl-gallery__item{
-		overflow: hidden;
-
-		&:hover{
-			img{
-				transform: scale(1.05);
-			}
-		}
-	}
-
-	img{
-		visibility: visible;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
-
-		transition: 500ms ease;
-		
-	}
-
-	@media (max-width: 1024px){
-		overflow-x: auto;
-		
-
-		
-		.sl-gallery__inner{
-
-		}
-		.sl-gallery__item{
-			width: max-content !important;
-			
-			flex-shrink: 0;
-		}
-
-		img{
-			width: auto ;
-			max-width: calc(100vw - 16px);
-		}
-	}
-	
-}
 
 @import 'units/header';
 @import 'units/menu';
@@ -286,6 +150,7 @@ main{
 @import 'units/qoute';
 @import 'units/description-product';
 @import 'units/use-materials';
+@import 'units/sl-gallery';
 
 @import 'units/gm-block';
 @import 'units/mc';

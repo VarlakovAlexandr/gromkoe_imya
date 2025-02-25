@@ -396,5 +396,35 @@ let fixCardSlider = new Swiper(".swiper.fix-card-slider", {
 })
 
 
-$('#photobox-gallery').photobox('a', { thumbs:false, time:0, history:false, captionTmpl:'<div class="title">{title}</div>' });
+const slGalleries = document.querySelectorAll('.sl-gallery');
 
+if ( slGalleries.length ){
+    slGalleries.forEach( slGallery => {
+        const images = slGallery.querySelectorAll('img');
+
+       
+        let height = slGallery.getAttribute('data-height');
+
+
+        let allWidth = 0;
+
+        images.forEach( img => {
+            allWidth = allWidth + img.offsetWidth;
+        } )
+        
+        images.forEach( img => {
+
+            let parent = img.closest('.sl-gallery__item');
+
+            let percentWidth = (img.offsetWidth / allWidth ) * 100;
+            console.log("calc(" + percentWidth + " - 10px)");
+            parent.style.width = "calc(" + percentWidth + "% - 10px)";
+            parent.style.height = slGallery.getAttribute('data-height') + 'px';
+        } )
+        
+
+        slGallery.classList.add('active')
+
+
+    })
+}

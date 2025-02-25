@@ -253,6 +253,7 @@ main{
 		}
 		.sl-gallery__item{
 			width: max-content !important;
+			flex-shrink: 0;
 		}
 
 		img{

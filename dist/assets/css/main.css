@@ -286,6 +286,8 @@ main {
     width: -webkit-max-content !important;
     width: -moz-max-content !important;
     width: max-content !important;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
   }
   .sl-gallery.active img {
     width: auto;

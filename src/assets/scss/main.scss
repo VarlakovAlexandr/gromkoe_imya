@@ -253,11 +253,13 @@ main{
 		}
 		.sl-gallery__item{
 			width: max-content !important;
+			
 			flex-shrink: 0;
 		}
 
 		img{
 			width: auto ;
+			max-width: calc(100vw - 16px);
 		}
 	}
 	

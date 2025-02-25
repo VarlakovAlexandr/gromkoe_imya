@@ -291,6 +291,7 @@ main {
   }
   .sl-gallery.active img {
     width: auto;
+    max-width: calc(100vw - 16px);
   }
 }
 
